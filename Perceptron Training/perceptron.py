@@ -17,6 +17,22 @@ def prediction(X, W, b):
 # and return W and b.
 def perceptronStep(X, y, W, b, learn_rate = 0.01):
     # Fill in code
+    # print(len(y))
+    # print(y.shape)
+    # print(W.shape)
+    for i in range(len(y)):
+        # if prediction(X[i], W, b) == 0 and y[i] == 0: 
+            # do nothing
+            # return W, b
+    
+        if prediction(X[i], W, b) == 0 and y[i] == 1:
+            W += X[i].reshape(2, 1) * learn_rate
+            b += learn_rate 
+        
+        elif prediction(X[i], W, b) == 1 and y[i] == 0:
+            W -= X[i].reshape(2, 1) * learn_rate
+            b -= learn_rate 
+            
     return W, b
     
 # This function runs the perceptron algorithm repeatedly on the dataset,
