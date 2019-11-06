@@ -36,21 +36,21 @@ for e in range(epochs):
         #       the h together with the output
 
         # TODO: Calculate the output
-        output = None
+        h = np.dot(x, weights)
+        output = sigmoid(h)
 
         # TODO: Calculate the error
-        error = None
+        error = error = y - output
 
         # TODO: Calculate the error term
-        error_term = None
+        error_term = error * output * (1 - output)
 
         # TODO: Calculate the change in weights for this sample
         #       and add it to the total weight change
-        del_w += 0
+        del_w = learnrate * error_term * x / n_records
 
     # TODO: Update weights using the learning rate and the average change in weights
-    weights += 0
-
+    weights += del_w
     # Printing out the mean square error on the training set
     if e % (epochs / 10) == 0:
         out = sigmoid(np.dot(features, weights))
