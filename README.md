@@ -1,2 +1,2 @@
 # AIPNDSubmissions
-some of the code for AIPND quizzes
+Some of the code for the Udacity AIPND course quizzes
