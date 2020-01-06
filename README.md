@@ -1,2 +1,2 @@
 # AIPNDSubmissions
-Code for AIPND quizzes
+some of the code for AIPND quizzes
